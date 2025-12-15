@@ -5,6 +5,8 @@
     <title>Proto Shape | 3D Printing & Prototyping</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link rel="icon" href="assets/img/logo.png" type="image/png" />
+
     <!-- FONT -->
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
@@ -86,11 +88,12 @@
       <div class="portfolio-grid">
         <div class="portfolio-card">
           <video
+            id="portfolioVideo"
             src="assets/video/IMG_7582.MP4"
-            autoplay
             muted
             loop
             playsinline
+            preload="auto"
           ></video>
         </div>
 
@@ -168,21 +171,6 @@
         © 2025 ProtoShape. All rights reserved.
       </footer>
     </section>
-
-    <script>
-      const videos = document.querySelectorAll('.portfolio-card video');
-
-      videos.forEach((video) => {
-        video.addEventListener('mouseenter', () => {
-          video.play();
-        });
-
-        video.addEventListener('mouseleave', () => {
-          video.pause();
-          video.currentTime = 0; // opsional, agar kembali ke awal
-        });
-      });
-    </script>
 
     <script>
       /* ===== SCENE ===== */
