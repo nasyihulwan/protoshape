@@ -86,7 +86,7 @@
       <div class="portfolio-grid">
         <div class="portfolio-card">
           <video
-            src="assets/video/prog_ular.MOV"
+            src="assets/video/IMG_7582.MP4"
             autoplay
             muted
             loop
@@ -103,7 +103,7 @@
         </div>
         <div class="portfolio-card">
           <video
-            src="assets/video/vid_batch.MOV"
+            src="assets/video/IMG_7547.MP4"
             autoplay
             muted
             loop
@@ -170,13 +170,21 @@
     </section>
 
     <script>
-      const videos = document.querySelectorAll('video');
+      const videos = document.querySelectorAll('.portfolio-card video');
+
       videos.forEach((video) => {
-        video.play().catch(() => {
-          console.log('Video tidak bisa autoplay, perlu interaksi user.');
+        video.addEventListener('mouseenter', () => {
+          video.play();
+        });
+
+        video.addEventListener('mouseleave', () => {
+          video.pause();
+          video.currentTime = 0; // opsional, agar kembali ke awal
         });
       });
+    </script>
 
+    <script>
       /* ===== SCENE ===== */
       const scene = new THREE.Scene();
 
