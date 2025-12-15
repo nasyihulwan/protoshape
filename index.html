@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Proto Shape | 3D Printing & Prototyping</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- FONT -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- THREE.JS -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.min.js"></script>
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- NAV -->
+    <nav class="floating-nav">
+      <ul>
+        <li><a href="#home" class="nav-item active">Home</a></li>
+        <li><a href="#services" class="nav-item">Services</a></li>
+        <li><a href="#portfolio" class="nav-item">Portfolio</a></li>
+        <li><a href="#contact" class="nav-item">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- THREE -->
+    <div id="three-container"></div>
+
+    <!-- TOGGLE -->
+    <div class="theme-toggle" id="toggle">🌙</div>
+
+    <!-- HERO -->
+    <section class="hero" id="home" data-aos="fade-up">
+      <h1>Proto Shape</h1>
+      <p>From Digital Design to Physical Reality</p>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" data-aos="fade-up">
+      <h2 class="section-title">Services</h2>
+      <p class="section-desc">
+        Kita ngerjain hal-hal yang real, bukan cuma konsep doang. Mulai dari ide
+        mentah sampai benda fisik yang bisa lo pegang.
+      </p>
+
+      <div class="services">
+        <div class="service-card">
+          <h3>3D Printing</h3>
+          <p>
+            Cetak cepat, presisi tinggi. Cocok buat prototipe, casing custom,
+            sampai part eksperimental.
+          </p>
+        </div>
+        <div class="service-card">
+          <h3>Product Prototyping</h3>
+          <p>
+            Punya ide tapi belum tau bentuknya? Kita bantu jadiin versi nyata
+            yang siap diuji.
+          </p>
+        </div>
+        <div class="service-card">
+          <h3>Custom Design</h3>
+          <p>
+            Desain custom sesuai kebutuhan lo. Nggak template, nggak generik.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio" data-aos="zoom-in">
+      <h2 class="section-title">Portfolio</h2>
+      <p class="section-desc">
+        Beberapa hasil eksperimen dan project yang udah kita garap. Nanti lo
+        bisa masukin foto-foto sendiri di sini.
+      </p>
+
+      <div class="portfolio-grid">
+        <div class="portfolio-card">
+          <video
+            src="assets/video/prog_ular.MOV"
+            autoplay
+            muted
+            loop
+            playsinline
+          ></video>
+        </div>
+
+        <div class="portfolio-card">
+          <img src="assets/img/prog_batch.JPG" alt="ProtoShape Project" />
+        </div>
+
+        <div class="portfolio-card">
+          <img src="assets/img/prog_ular.JPG" alt="ProtoShape Project" />
+        </div>
+        <div class="portfolio-card">
+          <video
+            src="assets/video/prog_batch.MOV"
+            autoplay
+            muted
+            loop
+            playsinline
+          ></video>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" data-aos="fade-up">
+      <h2 class="section-title">Contact</h2>
+      <div class="contact-box">
+        <p>
+          Mau order custom? Atau sekadar kepo soal proses & harga?
+          <br /><br />
+          Santai aja, DM atau chat dulu. Kita terbuka buat diskusi, kolaborasi,
+          atau sekadar tukar ide.
+        </p>
+
+        <div class="contact-links">
+          <a
+            href="https://www.instagram.com/proto_shape/"
+            target="_blank"
+            class="contact-btn ig"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-instagram"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"
+              />
+            </svg>
+          </a>
+
+          <a
+            href="https://wa.me/+6287708967966"
+            target="_blank"
+            class="contact-btn wa"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-whatsapp"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+      <footer class="site-footer" data-aos="fade-up">
+        © 2025 ProtoShape. All rights reserved.
+      </footer>
+    </section>
+
+    <script>
+      /* ===== SCENE ===== */
+      const scene = new THREE.Scene();
+
+      const camera = new THREE.PerspectiveCamera(
+        60,
+        window.innerWidth / window.innerHeight,
+        0.1,
+        200
+      );
+      camera.position.set(0, 1.5, 6);
+
+      const renderer = new THREE.WebGLRenderer({
+        alpha: true,
+        antialias: true,
+      });
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      document
+        .getElementById('three-container')
+        .appendChild(renderer.domElement);
+
+      /* ===== LIGHT ===== */
+      scene.add(new THREE.AmbientLight(0xffffff, 0.7));
+
+      const light = new THREE.DirectionalLight(0x00d4ff, 1.2);
+      light.position.set(5, 10, 5);
+      scene.add(light);
+
+      /* ===== PARTICLES (GLOWING & SMOOTH) ===== */
+      const particlesCount = 1400;
+      const positions = new Float32Array(particlesCount * 3);
+      const speed = new Float32Array(particlesCount);
+
+      for (let i = 0; i < particlesCount; i++) {
+        positions[i * 3] = (Math.random() - 0.5) * 80;
+        positions[i * 3 + 1] = (Math.random() - 0.5) * 60;
+        positions[i * 3 + 2] = (Math.random() - 0.5) * 80;
+        speed[i] = Math.random() * 0.6 + 0.2;
+      }
+
+      const particlesGeometry = new THREE.BufferGeometry();
+      particlesGeometry.setAttribute(
+        'position',
+        new THREE.BufferAttribute(positions, 3)
+      );
+
+      /* ===== PARTICLE TEXTURE (BULAT HALUS) ===== */
+      const canvas = document.createElement('canvas');
+      canvas.width = 64;
+      canvas.height = 64;
+      const ctx = canvas.getContext('2d');
+
+      const gradient = ctx.createRadialGradient(32, 32, 0, 32, 32, 32);
+      gradient.addColorStop(0, 'rgba(255,255,255,1)');
+      gradient.addColorStop(0.4, 'rgba(255,255,255,0.8)');
+      gradient.addColorStop(1, 'rgba(255,255,255,0)');
+
+      ctx.fillStyle = gradient;
+      ctx.fillRect(0, 0, 64, 64);
+
+      const particleTexture = new THREE.CanvasTexture(canvas);
+
+      const particlesMaterial = new THREE.PointsMaterial({
+        size: 0.12,
+        map: particleTexture,
+        alphaMap: particleTexture,
+        color: 0x00d4ff,
+        transparent: true,
+        opacity: 0.95,
+        blending: THREE.AdditiveBlending,
+        depthWrite: false,
+        sizeAttenuation: true,
+      });
+
+      const particles = new THREE.Points(particlesGeometry, particlesMaterial);
+      scene.add(particles);
+
+      /* ===== MAIN OBJECT (TIDAK DIHILANGKAN) ===== */
+      const geometry = new THREE.TorusKnotGeometry(0.9, 0.3, 128, 32);
+      const material = new THREE.MeshStandardMaterial({
+        color: 0x00d4ff,
+        metalness: 0.7,
+        roughness: 0.25,
+      });
+
+      const mesh = new THREE.Mesh(geometry, material);
+      scene.add(mesh);
+
+      /* ===== ANIMATION ===== */
+      let t = 0;
+      function animate() {
+        requestAnimationFrame(animate);
+        t += 0.002;
+
+        const pos = particles.geometry.attributes.position.array;
+        for (let i = 0; i < particlesCount; i++) {
+          pos[i * 3 + 1] += Math.sin(t * speed[i]) * 0.004;
+        }
+        particles.geometry.attributes.position.needsUpdate = true;
+
+        mesh.rotation.x += 0.003;
+        mesh.rotation.y += 0.004;
+
+        camera.lookAt(0, 0, 0);
+        renderer.render(scene, camera);
+      }
+      animate();
+
+      /* ===== THEME TOGGLE ===== */
+      const toggle = document.getElementById('toggle');
+      const body = document.body;
+
+      function setTheme(light) {
+        body.classList.toggle('light', light);
+        toggle.textContent = light ? '☀️' : '🌙';
+
+        const color = light ? 0x0077ff : 0x00d4ff;
+        material.color.set(color);
+        particlesMaterial.color.set(color);
+      }
+
+      if (localStorage.theme === 'light') setTheme(true);
+
+      toggle.onclick = () => {
+        const light = !body.classList.contains('light');
+        setTheme(light);
+        localStorage.theme = light ? 'light' : 'dark';
+      };
+
+      /* ===== RESIZE ===== */
+      window.onresize = () => {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+      };
+    </script>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+      AOS.init({
+        duration: 900,
+        easing: 'ease-out-cubic',
+        once: false,
+        mirror: true,
+        offset: 0,
+        anchorPlacement: 'center-bottom',
+      });
+
+      /* ===== NAV ACTIVE (FIX TOTAL) ===== */
+      const sections = document.querySelectorAll('section');
+      const navLinks = document.querySelectorAll('.nav-item');
+      const NAV_OFFSET = 160;
+
+      function updateActiveNav() {
+        let currentSection = '';
+
+        sections.forEach((section) => {
+          const rect = section.getBoundingClientRect();
+          if (rect.top <= NAV_OFFSET && rect.bottom >= NAV_OFFSET) {
+            currentSection = section.id;
+          }
+        });
+
+        navLinks.forEach((link) => {
+          const target = link.getAttribute('href').substring(1);
+          link.classList.toggle('active', target === currentSection);
+        });
+      }
+
+      window.addEventListener('scroll', updateActiveNav);
+      window.addEventListener('load', updateActiveNav);
+
+      /* ===== SMOOTH SCROLL WITH OFFSET (SINGLE SOURCE) ===== */
+      navLinks.forEach((link) => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+
+          const target = document.querySelector(link.getAttribute('href'));
+          const y =
+            target.getBoundingClientRect().top +
+            window.pageYOffset -
+            NAV_OFFSET;
+
+          window.scrollTo({
+            top: y,
+            behavior: 'smooth',
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
