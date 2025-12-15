@@ -103,7 +103,7 @@
         </div>
         <div class="portfolio-card">
           <video
-            src="assets/video/prog_batch.MOV"
+            src="assets/video/vid_batch.MOV"
             autoplay
             muted
             loop
@@ -170,6 +170,13 @@
     </section>
 
     <script>
+      const videos = document.querySelectorAll('video');
+      videos.forEach((video) => {
+        video.play().catch(() => {
+          console.log('Video tidak bisa autoplay, perlu interaksi user.');
+        });
+      });
+
       /* ===== SCENE ===== */
       const scene = new THREE.Scene();
 
